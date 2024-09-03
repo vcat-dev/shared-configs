@@ -14,11 +14,12 @@ Create a `biome.json` file to look like the following snippet:
 
 ```json
 {
-    "extends": "@piondev/shared-configs/biome"
+  "extends": "@piondev/shared-configs/biome"
 }
 ```
 
 Now, run Biome in your project:
+
 ```sh
 npx biome check --write
 ```
@@ -31,8 +32,8 @@ Create a `eslint.config.mjs` file to look like the following snippet:
 import config from "@piondev/shared-configs/eslint"
 
 export default [
-	...config,
-    // rest of your config
+  ...config
+  // rest of your config
 ]
 ```
 
@@ -44,7 +45,7 @@ Create a `prettier.config.mjs` file to look like the following snippet:
 import config from "@piondev/shared-configs/prettier"
 
 export default {
-	...config,
-    // rest of your config
+  ...config
+  // rest of your config
 }
 ```
