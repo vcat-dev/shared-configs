@@ -35,3 +35,16 @@ export default [
     // rest of your config
 ]
 ```
+
+## Prettier
+
+Create a `prettier.config.mjs` file to look like the following snippet:
+
+```js
+import config from "@piondev/shared-configs/prettier"
+
+export default {
+	...config,
+    // rest of your config
+}
+```
