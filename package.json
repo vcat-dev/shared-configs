@@ -1,6 +1,10 @@
 {
     "name": "@piondev/shared-config",
     "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vcat-dev/shared-configs"
+    },
     "exports": {
         "./biome": "./biome.jsonc"
     }
