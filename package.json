@@ -1,0 +1,7 @@
+{
+    "name": "@piondev/shared-config",
+    "type": "module",
+    "exports": {
+        "./biome": "./biome.jsonc"
+    }
+}
