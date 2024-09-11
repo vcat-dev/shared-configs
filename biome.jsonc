@@ -3,7 +3,7 @@
 	"formatter": {
 		"indentWidth": 4,
 		"lineWidth": 180,
-		"ignore": ["node_modules", "*-lock.json", "*.lock", "*.gen.ts", ".vscode", "coverage/**", "src/drizzle/**"]
+		"ignore": ["node_modules", "*-lock.json", "*.lock", "**/*.gen.ts", ".vscode", "coverage/**", "src/drizzle/**"]
 	},
 	"linter": {
 		"ignore": ["**/*.js", "dist/**", "src/overrides/**", "coverage/**"],
@@ -45,7 +45,7 @@
 	},
 	"organizeImports": {
 		"enabled": true,
-		"ignore": ["src/drizzle/**"]
+		"ignore": ["**/*.gen.ts", "src/drizzle/**"]
 	},
 	"javascript": {
 		"globals": ["$", "_"],
