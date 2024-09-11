@@ -17,7 +17,7 @@
     "lint:biome": "yarn biome check --write",
     "test": "eslint tests"
   },
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "^9.9.1",
     "biome": "^0.3.3",
     "eslint": "^9.9.1",
