@@ -3,7 +3,7 @@
 	"formatter": {
 		"indentWidth": 4,
 		"lineWidth": 180,
-		"ignore": ["node_modules", "*-lock.json", "*.lock", ".vscode", "coverage/**", "src/drizzle/**", "src/client/**"]
+		"ignore": ["node_modules", "*-lock.json", "*.lock", "*.gen.ts", ".vscode", "coverage/**", "src/drizzle/**"]
 	},
 	"linter": {
 		"ignore": ["**/*.js", "dist/**", "src/overrides/**", "coverage/**"],
