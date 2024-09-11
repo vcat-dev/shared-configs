@@ -1,0 +1,38 @@
+name: Code Review
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+  pull_request_review_comment:
+    types: [created]
+
+concurrency:
+  group:
+    ${{ github.repository }}-${{ github.event.number || github.head_ref ||
+    github.sha }}-${{ github.workflow }}-${{ github.event_name ==
+    'pull_request_review_comment' && 'pr_comment' || 'pr' }}
+  cancel-in-progress: ${{ github.event_name != 'pull_request_review_comment' }}
+
+jobs:
+  review:
+    runs-on: self-hosted
+    steps:
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.ALPHA_ROLE_TO_ASSUME }}
+          role-session-name: gha-session
+          aws-region: us-east-1
+      - name: PR review
+        uses: vcat-dev/pr-codereview@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          debug: false
+          review_simple_changes: true
+          review_comment_lgtm: true
+          language: ko-KR
