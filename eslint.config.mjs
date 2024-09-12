@@ -12,9 +12,9 @@ export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.r
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
-				argsIgnorePattern: "^_",
-				varsIgnorePattern: "^_",
-				caughtErrorsIgnorePattern: "^_"
+				argsIgnorePattern: "^_.*",
+				varsIgnorePattern: "^_.*",
+				caughtErrorsIgnorePattern: "^_.*"
 			}
 		],
 		"no-empty": "off",
