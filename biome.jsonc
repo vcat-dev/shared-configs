@@ -6,7 +6,7 @@
 		"ignore": ["node_modules", "*-lock.json", "*.lock", "**/*.gen.ts", ".vscode", "coverage/**", "src/drizzle/**"]
 	},
 	"linter": {
-		"ignore": ["**/*.js", "dist/**", "src/overrides/**", "coverage/**"],
+		"ignore": ["**/*.js", "**/dist/*", "src/overrides/**", "coverage/**"],
 		"rules": {
 			"correctness": {
 				"noSwitchDeclarations": "off"
