@@ -45,7 +45,7 @@
 	},
 	"organizeImports": {
 		"enabled": true,
-		"ignore": ["**/*.gen.ts", "src/drizzle/**"]
+		"ignore": ["**/*.gen.ts", "**/dist/*", "src/drizzle/**"]
 	},
 	"javascript": {
 		"globals": ["$", "_"],
