@@ -27,7 +27,7 @@ Create a `biome.json` file to look like the following snippet:
 
 ```json
 {
-  "extends": "@piondev/shared-configs/biome"
+  "extends": ["@piondev/shared-configs/biome"]
 }
 ```
 
