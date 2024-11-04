@@ -12,7 +12,7 @@
   },
   "scripts": {
     "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:biome",
-    "lint:eslint": "eslint . --fix",
+    "lint:eslint": "eslint . --fix --ignore-pattern 'tests/**/*-invalid.ts'",
     "lint:prettier": "prettier '**/*.{ts,tsx,js,jsx,json,md,cjs,mjs,yml,yaml}' --write",
     "lint:biome": "yarn biome check --write",
     "test": "eslint tests"

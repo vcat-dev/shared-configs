@@ -96,3 +96,7 @@ ESLint, Prettier, Biome을 함께 사용하는 이유는 다음과 같습니다:
    - GitHub Actions를 통해 PR 단계에서 자동화된 검사를 구현할 계획입니다.
 
 이러한 접근 방식을 통해 코드 품질을 높이고, 개발 효율성을 향상시키며, 프로젝트의 요구사항에 맞는 최적의 도구 조합을 구성하고자 합니다.
+
+## Samples
+
+- [Lint on Pull Request with GitHub Actions](./samples/lint.yml)

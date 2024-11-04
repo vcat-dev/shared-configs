@@ -1,0 +1,41 @@
+name: Lint
+
+on:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        package:
+          - api
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Configure NPM authentication
+        run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+
+      - name: Install dependencies
+        run: yarn install
+        working-directory: ${{ matrix.package }}
+
+      - name: Run linter
+        run: yarn lint
+        working-directory: ${{ matrix.package }}
+
+      - name: Check for uncommitted changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Linter made changes. Please run 'yarn lint' and commit the changes."
+            exit 1
+          fi
