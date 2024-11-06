@@ -17,7 +17,7 @@ export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.r
 				caughtErrorsIgnorePattern: "^_.*"
 			}
 		],
-		"no-console": ["error", { allow: ["debug", "info", "warn", "error"] }],
+		"no-console": ["error", { allow: ["debug", "error", "info", "trace", "warn"] }],
 		"no-empty": "off",
 		"no-case-declarations": "off"
 	}
