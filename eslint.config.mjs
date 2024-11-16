@@ -12,6 +12,7 @@ export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.r
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
+				allowShortCircuit: true,
 				argsIgnorePattern: "^_.*",
 				varsIgnorePattern: "^_.*",
 				caughtErrorsIgnorePattern: "^_.*"
