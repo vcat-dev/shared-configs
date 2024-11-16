@@ -9,6 +9,12 @@ export default tseslint.config(eslint.configs.recommended, ...tseslint.configs.r
 		"@typescript-eslint": tseslint.plugin
 	},
 	rules: {
+		"@typescript-eslint/no-unused-expressions": [
+			"error",
+			{
+				allowShortCircuit: false
+			}
+		],
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
