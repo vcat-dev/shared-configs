@@ -72,7 +72,7 @@ Finally, add the following scripts to your `package.json`:
   "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:biome",
   "lint:eslint": "eslint . --fix",
   "lint:prettier": "prettier '**/*.{ts,tsx,js,jsx,json,md,cjs,mjs,mts,yml,yaml}' --write",
-  "lint:biome": "yarn biome check --write"
+  "lint:biome": "biome check --write"
 }
 ```
 
